@@ -1,6 +1,50 @@
 /****************************NAVBAR*****************************/
 /****************************FIN NAVBAR*************************/
 /****************************BOUTIQUE***************************/
+body{
+  font-family: Montserrat;
+}
+.refPrice .row{
+  justify-content: space-between;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 14px;
+}
+.rowMan1{
+  line-height: 1rem;
+}
+.nameDes{
+  text-align: center;
+  line-height: 0.2rem;
+}
+.nameDes p:nth-of-type(1){
+  font-weight: bold;
+}
+.nameDes p:nth-of-type(2){
+  font-size: 14px;
+  font-weight: lighter;
+}
+hr{
+  width: 50%;
+  margin-top: 0;
+}
+.refPrice .row p:nth-of-type(2){
+  font-weight: 700;
+}
+.btnShop{
+  /* width: 30px; */
+
+}
+img{
+  max-height: 200px;
+}
+/* #woman{
+
+background: -webkit-linear-gradient(16deg, rgb(246, 162, 162), rgb(255, 255, 255));
+background: linear-gradient(16deg, rgb(246, 162, 162), rgb(255, 255, 255));
+
+
+} */
 /****************************FIN BOUTIQUE***********************/
 /****************************PANIER*****************************/
 /****************************FIN PANIER*************************/
