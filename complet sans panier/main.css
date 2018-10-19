@@ -9,7 +9,7 @@ body {
   border-bottom: 1px solid black;
 }
 
-.btn-success {
+.laboutique {
   position:absolute;
   z-index: 100;
   top: 50%;
@@ -241,6 +241,7 @@ body {
 }
 #btnPanier {
   font-size: 1em;
+  float:right;
 }
 #boutiique img{
   max-height: 200px;
@@ -254,7 +255,6 @@ background: linear-gradient(16deg, rgb(246, 162, 162), rgb(255, 255, 255));
 .item {
   width: 31%;
   float: left;
-  margin: 1%;
 }
 
 #cart-container {
@@ -264,7 +264,6 @@ background: linear-gradient(16deg, rgb(246, 162, 162), rgb(255, 255, 255));
 }
 
 #itemCount {
-  position: absolute;
   display: none;
   top: -10px;
   left: -10px;
@@ -274,9 +273,14 @@ background: linear-gradient(16deg, rgb(246, 162, 162), rgb(255, 255, 255));
   background: red;
   color: white;
   text-align: center;
+  float: right;
 }
 i:hover {
   cursor: pointer;
+}
+.modal-dialog {
+  max-width: 70%;
+
 }
 #shoppingCart {
   height: 100%;
@@ -331,6 +335,9 @@ i:hover {
   display:block;
 }
 
+.btn-primary {
+  background-color:
+}
 
 
 /****************************FIN PANIER*************************/
