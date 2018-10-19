@@ -69,4 +69,6 @@ $('#shoppingCart').on('click', '.removeItem', function(){
 });
 /****************************FIN PANIER*************************/
 /****************************MENTIONS LEGALES*******************/
+$('#footer').css('display', 'block');
+//$('.row').css({})
 /****************************FIN MENTIONS LEGALES***************/

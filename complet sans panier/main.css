@@ -1,5 +1,6 @@
 body {
   font-family: Montserrat;
+  overflow-x: hidden;
 }
 
 #navbar {
@@ -194,12 +195,15 @@ body{
 }
 .nameDes{
   text-align: center;
-  line-height: 0.2rem;
+  line-height: 1.2rem;
 }
-.nameDes p:nth-of-type(1){
+.nameDes .price, .nameDes .marque{
   font-weight: bold;
 }
-.nameDes p:nth-of-type(2){
+.ref {
+  font-weight: lighter;
+}
+.nomchauss {
   font-size: 14px;
   font-weight: lighter;
 }
@@ -223,14 +227,6 @@ background: linear-gradient(16deg, rgb(246, 162, 162), rgb(255, 255, 255));
   width: 31%;
   float: left;
   margin: 1%;
-}
-
-.itemText p {
-  margin-bottom: 20px;
-}
-
-.price-container {
-  margin-top: 20px;
 }
 
 #cart-container {
@@ -314,12 +310,33 @@ i:hover {
     color: white;
     /* border-top: 8px solid crimson; */
     background-color: #c91d61;
-    background: linear-gradient(20deg,blue,crimson,red); /*Change colors as you want*/
+    background: linear-gradient(20deg,blue,crimson,red); /Change colors as you want*/
     background-size: 1000% 1000% !important;
     -webkit-animation: changeColors 30s ease infinite;
     -moz-animation: changeColors 30s ease infinite;
     -o-animation: changeColors 30s ease infinite;
     animation: changeColors 30s ease infinite;
+}
+#divFooter{
+  margin-top: 20px;
+}
+#h1Chauss{
+  font-size: 2rem;
+}
+#facebook{
+font-size:30px;
+}
+#insta{
+font-size: 30px;
+margin: 0 20px 0 20px;
+}
+#twitter{
+font-size: 30px;
+}
+h4{
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 200;
 }
 
 @-webkit-keyframes changeColors {
