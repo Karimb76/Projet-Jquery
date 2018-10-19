@@ -52,11 +52,44 @@
 				</ul>
 				<ul class="navbar-nav ml-auto">
 					<li id="shoppingcart" class="nav-item" >
-					<i class="fa fa-shopping-cart" id="iconShop"></i>
+						<div id="cart-container">
+				      <div id="cart">
+				        <i class="fa fa-shopping-cart fa-2x openCloseCart" data-toggle="modal" data-target="#shoppingCart" aria-hidden="true"></i>
+				        <button id="emptyCart">Vider le panier</button>
+				      </div>
+				      <span id="itemCount"></span>
+				    </div>
 				 </li>
 				</ul>
 			</div>
 		</nav>
+		<!-- <div id="shoppingCart">
+		    <div id="cartItemsContainer">
+		      <h2>Produits dans votre panier</h2>
+		      <i class="fa fa-times-circle-o fa-3x openCloseCart" aria-hidden="true"></i>
+		      <div id="cartItems"></div>
+		      <span id="cartTotal"></span>
+		  	</div>
+		  </div> -->
+
+			<div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Votre panier</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="cartItems"></div>
+			<span id="cartTotal"></span>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Poursuivre vos achats</button>
+        <button type="button" class="btn btn-primary">Valider la commande</button>
+      </div>
+    </div>
+  </div>
+</div>
     <!-- FIN NAVBAR -->
     <!-- BOUTIQUE -->
 		<div class="container-fluid" id="boutiique">
@@ -67,7 +100,7 @@
 					<hr>
 				</div>
 				<div class="row rowMan1">
-					<div class="col-md-4 col-12" id="man1">
+					<!-- <div class="col-md-4 col-12" id="man1">
 						<div class="nameDes">
 							<img src="assets/IMG_5823.JPG" alt="photo">
 							<hr>
@@ -83,8 +116,20 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
-					<div class="col-md-4 col-12" id="man2">
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5823.JPG" alt="air max" />
+		</div>
+		<div class="itemText">
+			<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
+					<!-- <div class="col-md-4 col-12" id="man2">
 						<div class="nameDes">
 							<img src="assets/IMG_5824.JPG" alt="photo">
 							<hr>
@@ -100,8 +145,20 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
-					<div class="col-md-4 col-12" id="man3">
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5824.JPG" alt="GIVENCHY" />
+		</div>
+		<div class="itemText">
+			<p>GIVENCHY<br/>Sneakers</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
+					<!-- <div class="col-md-4 col-12" id="man3">
 						<div class="nameDes">
 							<img src="assets/IMG_5825.JPG" alt="photo">
 							<hr>
@@ -117,10 +174,22 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5823.JPG" alt="air max" />
+		</div>
+		<div class="itemText">
+			<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
 				</div>
 				<div class="row rowMan2">
-					<div class="col-md-4 col-12" id="man4">
+					<!-- <div class="col-md-4 col-12" id="man4">
 						<div class="nameDes">
 							<img src="assets/IMG_5826.JPG" alt="photo">
 							<hr>
@@ -136,8 +205,20 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
-					<div class="col-md-4 col-12" id="man5">
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5823.JPG" alt="air max" />
+		</div>
+		<div class="itemText">
+			<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
+					<!-- <div class="col-md-4 col-12" id="man5">
 						<div class="nameDes">
 							<img src="assets/IMG_5827.JPG" alt="photo">
 							<hr>
@@ -153,8 +234,20 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
-					<div class="col-md-4 col-12" id="man6">
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5823.JPG" alt="air max" />
+		</div>
+		<div class="itemText">
+			<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
+					<!-- <div class="col-md-4 col-12" id="man6">
 						<div class="nameDes">
 							<img src="assets/IMG_5828.JPG" alt="photo">
 							<hr>
@@ -170,7 +263,19 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5823.JPG" alt="air max" />
+		</div>
+		<div class="itemText">
+			<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
 				</div>
 			</div>
 			<br><br><br><br>
@@ -180,7 +285,7 @@
 					<hr>
 				</div>
 				<div class="row rowWoman1">
-					<div class="col-md-4 col-12" id="woman1">
+					<!-- <div class="col-md-4 col-12" id="woman1">
 						<div class="nameDes">
 							<img src="assets/IMG_5814.JPG" alt="photo">
 							<hr>
@@ -196,8 +301,20 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
-					<div class="col-md-4 col-12" id="woman2">
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5823.JPG" alt="air max" />
+		</div>
+		<div class="itemText">
+			<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
+					<!-- <div class="col-md-4 col-12" id="woman2">
 						<div class="nameDes">
 							<img src="assets/IMG_5815.JPG" alt="photo">
 							<hr>
@@ -213,8 +330,20 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
-					<div class="col-md-4 col-12" id="woman3">
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5823.JPG" alt="air max" />
+		</div>
+		<div class="itemText">
+			<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
+					<!-- <div class="col-md-4 col-12" id="woman3">
 						<div class="nameDes">
 							<img src="assets/IMG_5816.JPG" alt="photo">
 							<hr>
@@ -230,10 +359,22 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5823.JPG" alt="air max" />
+		</div>
+		<div class="itemText">
+			<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
 				</div>
 				<div class="row rowWoman2">
-					<div class="col-md-4 col-12" id="woman4">
+					<!-- <div class="col-md-4 col-12" id="woman4">
 						<div class="nameDes">
 							<img src="assets/IMG_5817.JPG" alt="photo">
 							<hr>
@@ -249,25 +390,33 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
-					<div class="col-md-4 col-12" id="woman5">
-						<div class="nameDes">
-							<img src="assets/IMG_5818.JPG" alt="photo">
-							<hr>
-							<p>MM6 MAISON MARGIELA</p><br>
-							<p>Sneakers</p><br>
-						</div>
-						<div class="container refPrice">
-							<div class="row">
-								<p>Réf : B011</p>
-								<p>EUR 168,00</p>
-							</div>
-						</div>
-						<div class="divButton" align="center">
-							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
-						</div>
-					</div>
-					<div class="col-md-4 col-12" id="woman6">
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5823.JPG" alt="air max" />
+		</div>
+		<div class="itemText">
+			<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
+
+<div class="item">
+<div class="itemDetails">
+<div class="itemImage">
+<img src="assets/IMG_5823.JPG" alt="air max" />
+</div>
+<div class="itemText">
+<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+</div>
+</div>
+<button class="add">Ajouter au panier</button>
+</div>
+					<!-- <div class="col-md-4 col-12" id="woman6">
 						<div class="nameDes">
 							<img src="assets/IMG_5819.JPG" alt="photo">
 							<hr>
@@ -283,13 +432,25 @@
 						<div class="divButton" align="center">
 							<button type="button" class="btn btn-light btnShop">Ajoutez au panier</button>
 						</div>
-					</div>
+					</div> -->
+					<div class="item">
+	<div class="itemDetails">
+		<div class="itemImage">
+			<img src="assets/IMG_5823.JPG" alt="air max" />
+		</div>
+		<div class="itemText">
+			<p>NIKE<br/>AIR MAX 95 PREMIUM</p>
+			<p class="price-container">Réf : A001<span class="price">175</span>€</p>
+		</div>
+	</div>
+	<button class="add">Ajouter au panier</button>
+</div>
 				</div>
 			</div>
 		</div>
     <!-- FIN BOUTIQUE -->
     <!-- PANIER -->
-		
+
     <!-- FIN PANIER -->
     <!-- MENTIONS LEGALES -->
 		<!-- Footer starts here -->
