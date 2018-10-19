@@ -22,7 +22,7 @@ $('.add').click(function (){
   itemCount ++;
 
   $('#itemCount').text(itemCount).css('display', 'block');
-  $(this).siblings().clone().appendTo('#cartItems').append('<button class="removeItem">Supprimer ce produit</button>');
+  $(this).siblings().clone().appendTo('#cartItems').append('<button class="removeItem btn btn-light">Supprimer ce produit</button>');
 
   // Calculer le prix total
   var price = parseInt($(this).siblings().find('.price').text());

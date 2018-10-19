@@ -181,10 +181,7 @@ body {
 }
 /***************************FIN PRESENTATION********************/
 /****************************BOUTIQUE***************************/
-body{
-  font-family: Montserrat;
-}
-.refPrice .row{
+/* .refPrice .row{
   justify-content: space-between;
   margin-left: 30px;
   margin-right: 30px;
@@ -205,7 +202,35 @@ body{
 }
 .nomchauss {
   font-size: 14px;
-  font-weight: lighter;
+  font-weight: lighter; */
+/* } */
+.item{
+  text-align: center;
+}
+.itemImage{
+  text-align: center;
+}
+.shoesName{
+  text-align: center;
+  margin: 0;
+}
+.nameShoes{
+  font-weight: bold;
+}
+.price-container{
+  text-align: center;
+  font-size: 10px;
+}
+.price{
+  font-weight: bold;
+  font-size: 16px;
+}
+.euros{
+  font-weight: bold;
+  font-size: 16px;
+}
+.add{
+  text-align: center;
 }
 #boutiique hr{
   width: 50%;
@@ -213,6 +238,9 @@ body{
 }
 .refPrice .row p:nth-of-type(2){
   font-weight: 700;
+}
+#btnPanier {
+  font-size: 1em;
 }
 #boutiique img{
   max-height: 200px;
@@ -299,7 +327,8 @@ i:hover {
 }
 
 .removeItem {
-  margin-left: 40px;
+  margin:auto;
+  display:block;
 }
 
 
