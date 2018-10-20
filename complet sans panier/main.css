@@ -32,13 +32,13 @@ body {
 }
 
 @media (max-width: 900px) {
-  .btn-dark {
+  #btnsavoir {
     top: 40%;
     left: 20%;
     height: 7%;
     width: 60%;
   }
-  .btn-success {
+  .laboutique {
     top: 30%;
     left: 20%;
     height: 7%;
@@ -246,6 +246,7 @@ body {
 #boutiique img{
   max-height: 200px;
 }
+
 /* #woman{
 background: -webkit-linear-gradient(16deg, rgb(246, 162, 162), rgb(255, 255, 255));
 background: linear-gradient(16deg, rgb(246, 162, 162), rgb(255, 255, 255));

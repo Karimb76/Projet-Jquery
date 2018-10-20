@@ -82,7 +82,7 @@
         </button>
       </div>
       <div class="modal-body" id="cartItems" align="center"></div>
-				<span id="cartTotal"></span>
+				<span id="cartTotal">0</span>
     	  <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Poursuivre vos achats</button>
 	        <button type="button" class="btn btn-success">Valider la commande</button>
@@ -100,47 +100,50 @@
 					<hr>
 				</div>
 				<div class="row rowMan1">
-					<div class="item col-md-4 col-12">
+					<div id="man1" class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
 								<img src="assets/IMG_5823.JPG" alt="photo air max" />
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 95 PREMIUM</p>
-								<p class="price-container">Réf : A001<span class="price"><br><br>175</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : A001<span class="price" id="price1"><br><br>175</span><span class="euros">€</span></p>
 							</div>
+
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add1" class="add btn btn-light">Ajouter au panier</button>
+
 					</div>
 
-					<div class="item col-md-4 col-12">
+
+					<div id="man2" class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
 								<img src="assets/IMG_5824.JPG" alt="photo GIVENCHY" />
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">GIVENCHY</span><br/>Sneakers</p>
-								<p class="price-container">Réf : A002<span class="price"><br><br>244</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : A002<span class="price" id="price2"><br><br>244</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add2" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 
-					<div class="item col-md-4 col-12">
+					<div id="man3" class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
 								<img src="assets/IMG_5825.JPG" alt="photo AIR MAX 270" />
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 270</p>
-								<p class="price-container">Réf : A003<span class="price"><br><br>150</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : A003<span id="price3" class="price"><br><br>150</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add3" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 				</div>
 
-				<div class="row rowMan2">
+				<div id="man4" class="row rowMan2">
 					<div class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
@@ -148,36 +151,36 @@
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">MSGM</span><br/>Sneakers</p>
-								<p class="price-container">Réf : A004<span class="price"><br><br>229</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : A004<span id="price4" class="price"><br><br>229</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add4" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 
-					<div class="item col-md-4 col-12">
+					<div id="man5" class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
 								<img src="assets/IMG_5827.JPG" alt="photo ADIDAS ORIGINALS" />
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">ADIDAS ORIGINALS</span><br/>EQT SUPPORT MID ADV PK</p>
-								<p class="price-container">Réf : A005<span class="price"><br><br>120</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : A005<span id="price5" class="price"><br><br>120</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add5" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 
-					<div class="item col-md-4 col-12">
+					<div id="man6" class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
 								<img src="assets/IMG_5828.JPG" alt="photo Nike AIR MAX 95 PREMIUM" />
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 95 PREMIUM</p>
-								<p class="price-container">Réf : A006<span class="price"><br><br>175</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : A006<span id="price6" class="price"><br><br>175</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add6" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 				</div>
 			</div>
@@ -189,47 +192,47 @@
 				</div>
 				<div class="row rowWoman1">
 
-					<div class="item col-md-4 col-12">
+					<div id="man7" class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
 								<img src="assets/IMG_5814.JPG" alt="photo PUMA AVID Fusefit Mid" />
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">PUMA</span><br/>AVID Fusefit Mid</p>
-								<p class="price-container">Réf : B007<span class="price"><br><br>140</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : B007<span id="price7" class="price"><br><br>140</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add7" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 
-					<div class="item col-md-4 col-12">
+					<div id="man8" class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
 								<img src="assets/IMG_5815.JPG" alt="photo NIKE AIR MAX 97" />
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 97</p>
-								<p class="price-container">Réf : B008<span class="price"><br><br>180</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : B008<span id="price8" class="price"><br><br>180</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add8" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 
-					<div class="item col-md-4 col-12">
+					<div id="man9" class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
 								<img src="assets/IMG_5816.JPG" alt="photo VANS UA SK8-HI" />
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">VANS</span><br/>UA SK8-HI</p>
-								<p class="price-container">Réf : B009<span class="price"><br><br>69</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : B009<span id="price9" class="price"><br><br>69</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add9" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 				</div>
 
-				<div class="row rowWoman2">
+				<div id="man10" class="row rowWoman2">
 					<div class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
@@ -237,36 +240,36 @@
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">ADIDAS ORIGINALS</span><br/>YUNG-1</p>
-								<p class="price-container">Réf : B010<span class="price"><br><br>120</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : B010<span id="price10" class="price"><br><br>120</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add10" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 
-					<div class="item col-md-4 col-12">
+					<div id="man11" class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
 								<img src="assets/IMG_5818.JPG" alt="photo MM6 MAISON MARGIELA" />
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">MM6 MAISON MARGIELA</span><br/>Sneakers</p>
-								<p class="price-container">Réf : B011<span class="price"><br><br>168</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : B011<span id="price11" class="price"><br><br>168</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add11" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 
-					<div class="item col-md-4 col-12">
+					<div id="man12" class="item col-md-4 col-12">
 						<div class="itemDetails">
 							<div class="itemImage">
 								<img src="assets/IMG_5819.JPG" alt="photo NIKE AIR FORCE" />
 							</div>
 							<div class="itemText">
 								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR FORCE</p>
-								<p class="price-container">Réf : B012<span class="price"><br><br>120</span><span class="euros">€</span></p>
+								<p class="price-container">Réf : B012<span id="price12" class="price"><br><br>120</span><span class="euros">€</span></p>
 							</div>
 						</div>
-						<button class="add btn btn-light">Ajouter au panier</button>
+						<button id="add12" class="add btn btn-light">Ajouter au panier</button>
 					</div>
 				</div>
 			</div>
