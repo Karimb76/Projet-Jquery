@@ -54,7 +54,6 @@
 					<li id="shoppingcart" class="nav-item" >
 						<div id="cart-container">
 				      <div id="cart">
-				        <!-- <button id="emptyCart" class="btn btn-light">Vider le panier</button> -->
 								<i id="btnPanier" class="fa fa-shopping-cart fa-2x openCloseCart" data-toggle="modal" data-target="#shoppingCart" aria-hidden="true"></i>
 				      </div>
 				      <span id="itemCount"></span>
@@ -84,8 +83,9 @@
       <div class="modal-body" id="cartItems" align="center"></div>
 				<span id="cartTotal">0</span>
     	  <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Poursuivre vos achats</button>
-	        <button type="button" class="btn btn-success">Valider la commande</button>
+	        <button id="achat" type="button" class="btn btn-secondary" data-dismiss="modal">Poursuivre vos achats</button>
+					<button type="button" class="btn btn-info" id="maj" data-toggle="tooltip" data-placement="top" title="Mettre à jour le panier"><i class="fa fa-sync-alt"></i></button>
+	        <button id="valider" type="button" class="btn btn-success">Valider la commande</button>
 	      </div>
 	    </div>
 	  </div>

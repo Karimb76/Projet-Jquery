@@ -8,6 +8,9 @@ $(document).ready(function() {
     });
   });
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 /***************************FIN PRESENTATION********************/
 /****************************BOUTIQUE***************************/
 /****************************FIN BOUTIQUE***********************/
@@ -164,8 +167,7 @@ $('#add12').click(function (){
 }});
 
 // Ouvre et cache le panier et le met à jour lors de l'ajout d'un produit
-$('.openCloseCart').click(function(){
-  $('#shoppingCart').toggle();
+$('#btnPanier, #maj').click(function(){
   if ($("#quantity1").length) { //si #quantity1 existe, calculer sa valeur en fonction du nombre de produits1 ajouter
     var price1 = parseInt($("#price1").text() * $("#quantity1").val());
   }
@@ -328,8 +330,6 @@ $('#shoppingCart').on('click', '.removeItem', function(){ //dans le panier, au c
   $('#itemCount').text(itemCount); //rmettre a jour le compteur du panier
   $('#cartTotal').text("Total: " + prixTotal + " €").css("text-align", "center").css("font-weight", "bolder"); //afficher le prix total
 });
-
-
 /****************************FIN PANIER*************************/
 /****************************MENTIONS LEGALES*******************/
 $('#footer').css('display', 'block');
