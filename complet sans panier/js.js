@@ -11,6 +11,14 @@ $(document).ready(function() {
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
+
+$(".add").click(function() {
+  $(".alert").show();
+});
+
+$("#closealert").click(function() {
+  $(".alert").hide();
+});
 /***************************FIN PRESENTATION********************/
 /****************************BOUTIQUE***************************/
 /****************************FIN BOUTIQUE***********************/

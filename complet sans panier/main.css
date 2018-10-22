@@ -64,6 +64,15 @@ body {
   float: left;
 }
 
+.alert{
+  display: none;
+  position: fixed;
+  top: 90%;
+  left: 70%;
+  z-index: 100000;
+  width: 400px;
+}
+
 /****************************FIN NAVBAR*************************/
 /***************************PRESENTATION************************/
 .bigger {
