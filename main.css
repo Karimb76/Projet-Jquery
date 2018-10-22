@@ -1,6 +1,6 @@
-/****************************NAVBAR*****************************/
 body {
   font-family: Montserrat;
+  overflow-x: hidden;
 }
 
 #navbar {
@@ -9,7 +9,7 @@ body {
   border-bottom: 1px solid black;
 }
 
-.btn-success {
+.laboutique {
   position:absolute;
   z-index: 100;
   top: 50%;
@@ -32,13 +32,13 @@ body {
 }
 
 @media (max-width: 900px) {
-  .btn-dark {
+  #btnsavoir {
     top: 40%;
     left: 20%;
     height: 7%;
     width: 60%;
   }
-  .btn-success {
+  .laboutique {
     top: 30%;
     left: 20%;
     height: 7%;
@@ -59,8 +59,21 @@ body {
 .navbar-default ul a:hover {
   background-color: rgba(233,75,80, 0.4);
 }
+
+#shoppingcart {
+  /* float: left; */
+}
+
+.alert{
+  display: none;
+  position: fixed;
+  top: 90%;
+  left: 70%;
+  z-index: 100000;
+  width: 400px;
+}
 /****************************FIN NAVBAR*************************/
-/************************** PRESENTATION ************************/
+/***************************PRESENTATION************************/
 .bigger {
   margin: 0;
   font-size: 60px;
@@ -119,7 +132,7 @@ body {
   z-index: 10;
 }
 .has-animation.animate-in:before {
-  background-color: #b22a2c;
+  background-color: #df4967;
 }
 .has-animation.animate-in:after {
   background-color: #1d2633;
@@ -174,10 +187,255 @@ body {
     opacity: 1;
   }
 }
-/************************** FIN PRESENTATION ********************/
+/***************************FIN PRESENTATION********************/
 /****************************BOUTIQUE***************************/
+
+.item{
+  text-align: center;
+}
+.itemImage{
+  text-align: center;
+}
+.shoesName{
+  text-align: center;
+  margin: 0;
+}
+.nameShoes{
+  font-weight: bold;
+}
+.price-container{
+  text-align: center;
+  font-size: 10px;
+}
+.price{
+  font-weight: bold;
+  font-size: 16px;
+}
+.euros{
+  font-weight: bold;
+  font-size: 16px;
+}
+.add{
+  text-align: center;
+}
+
+#boutiique .hrItem{
+  height: 1.5px;
+  background-image: -webkit-linear-gradient(left, rgba(255,2,5,.5), rgba(137,11,138,.5), rgba(27,123,187,.5), rgba(47,195,44,.5), rgba(253,201,1,.5), rgba(255,91,2,.5), #ccc 15%, #ccc 85%, rgba(255,91,2,.5), rgba(253,201,1,.5), rgba(47,195,44,.5), rgba(27,123,187,.5), rgba(137,11,138,.5), rgba(255,2,5,.5));
+        background-image: -moz-linear-gradient(left, rgba(255,2,5,.5), rgba(137,11,138,.5), rgba(27,123,187,.5), rgba(47,195,44,.5), rgba(253,201,1,.5), rgba(255,91,2,.5), #ccc 15%, #ccc 85%, rgba(255,91,2,.5), rgba(253,201,1,.5), rgba(47,195,44,.5), rgba(27,123,187,.5), rgba(137,11,138,.5), rgba(255,2,5,.5));
+        background-image: -ms-linear-gradient(left, rgba(255,2,5,.5), rgba(137,11,138,.5), rgba(27,123,187,.5), rgba(47,195,44,.5), rgba(253,201,1,.5), rgba(255,91,2,.5), #ccc 15%, #ccc 85%, rgba(255,91,2,.5), rgba(253,201,1,.5), rgba(47,195,44,.5), rgba(27,123,187,.5), rgba(137,11,138,.5), rgba(255,2,5,.5));
+        background-image: -o-linear-gradient(left, rgba(255,2,5,.5), rgba(137,11,138,.5), rgba(27,123,187,.5), rgba(47,195,44,.5), rgba(253,201,1,.5), rgba(255,91,2,.5), #ccc 15%, #ccc 85%, rgba(255,91,2,.5), rgba(253,201,1,.5), rgba(47,195,44,.5), rgba(27,123,187,.5), rgba(137,11,138,.5), rgba(255,2,5,.5));
+        width: 30% !important;
+    }
+.refPrice .row p:nth-of-type(2){
+  font-weight: 700;
+}
+
+#boutiique img{
+  max-height: 200px;
+}
+h2{
+  font-family: 'Montserrat', cursive;
+  /* font-weight: bolder; */
+  color: #454545;
+  text-shadow: 0px 1px 1px grey;
+}
+
+/* #woman{
+background: -webkit-linear-gradient(16deg, rgb(246, 162, 162), rgb(255, 255, 255));
+background: linear-gradient(16deg, rgb(246, 162, 162), rgb(255, 255, 255));
+} */
 /****************************FIN BOUTIQUE***********************/
 /****************************PANIER*****************************/
+.item {
+  width: 31%;
+  float: left;
+}
+
+#cart-container {
+  /* float: right; */
+  /* width: 210px; */
+  /* position: relative; */
+}
+
+#itemCount, #itemCount2 {
+  display: none;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  text-align: center;
+  float: left;
+}
+i:hover {
+  cursor: pointer;
+}
+.modal-dialog {
+  max-width: 70%;
+}
+.modal-dialog img {
+  max-height: 100px;
+}
+.modal-dialog input {
+  max-width: 50px;
+}
+@media (max-width: 700px) {
+  .modal-dialog {
+    max-width: 90%;
+  }
+  .modal-dialog img {
+    max-height: 70px;
+  }
+  #valider {
+    width: 85%;
+  }
+  #maj {
+    width: 80%;
+  }
+  .alert {
+    top: 110%;
+  }
+}
+
+#cartItems .itemDetails {
+  margin-right: 50px;
+}
+#cartItemsContainer {
+  position: relative;
+  width: 600px;
+  left: 50%;
+  top: 150px;
+  margin-left: -300px;
+  padding: 40px;
+  box-shadow: 0 0 10px black;
+  background: #e9e9e9;
+  overflow: auto;
+}
+
+#cartItemsContainer i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#cartItemsContainer .itemDetails {
+  overflow: auto;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#cartItemsContainer .itemImage {
+  float: left;
+  width: 260px;
+  padding: 0 40px;
+}
+
+#cartItemsContainer .itemText {
+  float: right;
+  width: 260px;
+  padding: 0 40px;
+}
+
+#cartItemsContainer .itemText .price-container {
+  margin-top: 0;
+}
+
+.removeItem {
+  margin:auto;
+  display:block;
+}
+
+.btn-primary {
+  background-color:
+}
+
+#btnPanier {
+  font-size: 1.3em;
+}
+
 /****************************FIN PANIER*************************/
 /****************************MENTIONS LEGALES*******************/
+.footer{
+    color: white;
+    background-color: #c91d61;
+    background: linear-gradient(20deg,blue,crimson,purple);
+    background-size: 1000% 1000% !important;
+    -webkit-animation: colorChange 30s ease infinite;
+    -moz-animation: colorChange 30s ease infinite;
+    -o-animation: colorChange 30s ease infinite;
+    animation: colorChange 30s ease infinite;
+}
+@-webkit-keyframes colorChange {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+#divFooter{
+  margin-top: 20px;
+}
+#h1Chauss{
+  font-size: 1.4rem;
+}
+#facebook{
+font-size:30px;
+}
+#insta{
+font-size: 30px;
+margin: 0 20px 0 20px;
+}
+#twitter{
+font-size: 30px;
+}
+.h4{
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 200;
+}
+h6{
+  font-size: 12px;
+}
+.mailto{
+  font-size: 14px;
+}
 /****************************FIN MENTIONS LEGALES***************/
+@media screen and (min-width: 200px) and (max-width: 780px) {
+  #navbar{
+    display: none;
+  }
+  #navbar2{
+    display: block;
+    text-align: center;
+  }
+  #shoppingcart {
+    /* float: right; */
+  }
+  .dropdown-menu.show{
+    text-align: center;
+  }
+  #modalFooter1{
+    display: none;
+  }
+  #modalFooter2{
+    margin-left: 2%;
+  }
+  #cartItems .itemDetails {
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 781px) and (max-width: 2000px) {
+  #navbar2{
+    display: none;
+  }
+  #modalFooter2{
+    display: none;
+  }
+}

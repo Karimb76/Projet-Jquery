@@ -10,63 +10,359 @@
   	<link type="text/css" rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
+		<title>Chauss'Kaly</title>
   </head>
   <body>
 		<!-- PRESENTATION -->
 		<img class="col-12 px-0 imgpres" src="assets/imgpres.jpg" alt="femme en chaussures" />
-		<button type="button" class="btn btn-success">Visiter la boutique</button>
-		<button id="btnsavoir" type="button" class="btn btn-dark">Contact</button>
+		<button type="button" class="btn btn-success laboutique" onclick="location.href='#homme'">la boutique</button>
+		<button id="btnsavoir" type="button" class="btn btn-dark" href="#footer" onclick="location.href='#footer'">Contact</button>
 		<!--TEST ENSAVOIRPLUS-->
 		<div class="has-animation animation-ltr titresavoir" data-delay="10">
-		  <p class="bigger">Chauss'Kaly </p>
+		  <p class="bigger">Chauss'Kaly</p>
 		</div>
 		<br><br>
 		<div class="has-animation animation-rtl textesavoir" data-delay="1000">
 		  <p class="textpres">
 				"La qualité, notre priorité."
-	  </p>
+	  	</p>
 		</div>
-		<!--fin test-->
-		<!--FIN PRESENTATION -->
+		<!-- FIN TEST -->
+		<!-- FIN PRESENTATION -->
     <!-- NAVBAR -->
-<nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-<a class="navbar-brand" href="#"><img src="assets/logo.png" /></a>
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNavDropdown">
-<ul class="navbar-nav">
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Boutique
-    </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-      <a class="dropdown-item" href="#">Chaussures Hommes</a>
-      <a class="dropdown-item" href="#">Chaussures Femmes</a>
-    </div>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Panier</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Mentions légales</a>
-  </li>
-</ul>
+		<!-- ORIDNATEUR -->
+		<nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-light bg-light hidden">
+			<a class="navbar-brand" href="#"><img src="assets/logo.png" /></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav">
+				  <li class="nav-item dropdown">
+				    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				      Boutique
+				    </a>
+				    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				      <a class="dropdown-item" href="#homme">Homme</a>
+				      <a class="dropdown-item" href="#femme">Femme</a>
+				    </div>
+				  </li>
+				  <li class="nav-item">
+				    <a class="nav-link active" href="#footer">Contact</a>
+				  </li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li id="shoppingcart" class="nav-item" >
+						<div id="cart-container">
+				      <div id="cart">
+								<span id="itemCount"></span>
+								<i id="btnPanier" class="fa fa-shopping-cart fa-2x openCloseCart" data-toggle="modal" data-target="#shoppingCart" aria-hidden="true"></i>
+				      </div>
+				    </div>
+				 </li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- RESPONSIVE -->
+		<nav id="navbar2" class="navbar fixed-bottom navbar-expand-lg navbar-light bg-light hidden">
+			<div>
+				<ul class="list-inline">
+					<li class="list-inline-item">
+					 <a class="nav-link active" href="#"><img src="assets/shop.png" alt=""></a>
+				 	</li>
+				  <li class="list-inline-item">
+						<div class="btn-group dropup">
+							<a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					      <img src="assets/shopping-bag.png" alt="">
+					    </a>
+					    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					      <a class="dropdown-item" href="#homme"><img width="30%" src="assets/man.png" alt=""></a>
+					      <a class="dropdown-item" href="#femme"><img width="30%" src="assets/woman.png" alt=""></a>
+					    </div>
+						</div>
+
+				  </li>
+					<li id="shoppingcart" class="list-inline-item" >
+						<div id="cart-container">
+				      <div id="cart">
+								<span id="itemCount2"></span>
+								<img id="btnPanier" class="openCloseCart" src="assets/shopping-cart.png" data-toggle="modal" data-target="#shoppingCart" aria-hidden="true" />
+				      </div>
+				    </div>
+				 	</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- <div id="shoppingCart">
+		    <div id="cartItemsContainer">
+		      <h2>Produits dans votre panier</h2>
+		      <i class="fa fa-times-circle-o fa-3x openCloseCart" aria-hidden="true"></i>
+		      <div id="cartItems"></div>
+		      <span id="cartTotal"></span>
+		  	</div>
+		  </div> -->
+
+			<div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Votre panier</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="cartItems" align="center"></div>
+				<span id="cartTotal">0</span>
+				<!-- ORDINATEUR -->
+				<div class="modal-footer" id="modalFooter1">
+	        <button id="achat" type="button" class="btn btn-secondary" data-dismiss="modal">Poursuivre vos achats</button>
+					<button type="button" class="btn btn-info" id="maj" data-toggle="tooltip" data-placement="top" title="Mettre à jour le panier"><i class="fa fa-sync-alt"></i></button>
+	        <button id="valider" type="button" class="btn btn-success">Valider la commande</button>
+	      </div>
+				<!-- RESPONSIVE -->
+				<div class="modal-footer col-12" id="modalFooter2">
+	        <button id="achat" type="button" class="btn btn-secondary col-5" data-dismiss="modal">Poursuivre<br>vos achats</button>
+					<button type="button" class="btn btn-info col-2" id="maj" data-toggle="tooltip" data-placement="top" title="Mettre à jour le panier"><i class="fa fa-sync-alt"></i></button>
+	        <button id="valider" type="button" class="btn btn-success col-5">Valider la<br>commande</button>
+				</div>
+	    </div>
+	  </div>
+	</div>
+	<div class="alert alert-success alert-dismissible fade show" role="alert">
+	<button type="button" class="close" id="closealert">
+		<span aria-hidden="true">&times;</span>
+	</button>
+Le produit a bien été ajouté au panier.
 </div>
-</nav>
     <!-- FIN NAVBAR -->
     <!-- BOUTIQUE -->
+		<div class="container-fluid mx-auto" id="boutiique">
+			<div class="container man">
+				<div class="divTitre" text-center>
+					<br><br>
+					<h2 align="center"><div id="homme">HOMME</div></h2>
+						<!-- <hr id="hrBout1"> -->
+					</div>
+				<div class="row rowMan1">
+					<div id="man1" class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5823.JPG" alt="photo air max" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 95 PREMIUM</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : A001<span class="price" id="price1"><br><br>175</span><span class="euros">€</span></p>
+							</div>
+
+						</div>
+						<button id="add1" class="add btn btn-light">Ajouter au panier</button>
+
+					</div>
+
+
+					<div id="man2" class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5824.JPG" alt="photo GIVENCHY" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">GIVENCHY</span><br/>Sneakers</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : A002<span class="price" id="price2"><br><br>244</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add2" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+
+					<div id="man3" class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5825.JPG" alt="photo AIR MAX 270" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 270</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : A003<span id="price3" class="price"><br><br>150</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add3" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+				</div>
+
+				<div id="man4" class="row rowMan2">
+					<div class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5826.JPG" alt="photo MSGM" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">MSGM</span><br/>Sneakers</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : A004<span id="price4" class="price"><br><br>229</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add4" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+
+					<div id="man5" class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5827.JPG" alt="photo ADIDAS ORIGINALS" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">ADIDAS ORIGINALS</span><br/>EQT SUPPORT MID ADV PK</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : A005<span id="price5" class="price"><br><br>120</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add5" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+
+					<div id="man6" class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5828.JPG" alt="photo Nike AIR MAX 95 PREMIUM" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 95 PREMIUM</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : A006<span id="price6" class="price"><br><br>175</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add6" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+				</div>
+			</div>
+			<br><br><br><br>
+			<div class="container woman">
+				<div class="divTitre" text-center>
+					<h2 align="center"><div id="femme">FEMME</div></h2>
+						<!-- <hr id="hrBout2"> -->
+				</div>
+				<div class="row rowWoman1">
+
+					<div id="man7" class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5814.JPG" alt="photo PUMA AVID Fusefit Mid" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">PUMA</span><br/>AVID Fusefit Mid</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : B007<span id="price7" class="price"><br><br>140</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add7" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+
+					<div id="man8" class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5815.JPG" alt="photo NIKE AIR MAX 97" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 97</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : B008<span id="price8" class="price"><br><br>180</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add8" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+
+					<div id="man9" class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5816.JPG" alt="photo VANS UA SK8-HI" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">VANS</span><br/>UA SK8-HI</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : B009<span id="price9" class="price"><br><br>69</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add9" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+				</div>
+
+				<div id="man10" class="row rowWoman2">
+					<div class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5817.JPG" alt="photo ADIDAS YUNG-1" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">ADIDAS ORIGINALS</span><br/>YUNG-1</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : B010<span id="price10" class="price"><br><br>120</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add10" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+
+					<div id="man11" class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5818.JPG" alt="photo MM6 MAISON MARGIELA" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">MM6 MAISON MARGIELA</span><br/>Sneakers</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : B011<span id="price11" class="price"><br><br>168</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add11" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+
+					<div id="man12" class="item col-md-4 col-12">
+						<div class="itemDetails">
+							<div class="itemImage">
+								<img src="assets/IMG_5819.JPG" alt="photo NIKE AIR FORCE" />
+							</div>
+							<div class="itemText">
+								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR FORCE</p>
+								<hr class="hrItem">
+								<p class="price-container">Réf : B012<span id="price12" class="price"><br><br>120</span><span class="euros">€</span></p>
+							</div>
+						</div>
+						<button id="add12" class="add btn btn-light">Ajouter au panier</button>
+					</div>
+				</div>
+			</div>
+		</div>
     <!-- FIN BOUTIQUE -->
     <!-- PANIER -->
+
     <!-- FIN PANIER -->
     <!-- MENTIONS LEGALES -->
+		<!-- Footer starts here -->
+		<footer class="footer row mt-5" id="footer">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-12 text-center" id="divFooter">
+                    <h1 id="h1Chauss">Chauss'Kaly <i class="fas fa-shoe-prints"></i></h1>
+                    <h4 class="h4">70 Quai Frissard, 76600 Le Havre</h4>
+                    <h4 class="h4"> 02 35 11 33 60</h4>
+										<a class="mailto" href="mailto:contact@chaussKaly.com"style="color:white">contact@chaussKaly.com</a>
+            </div>
+                <div class="col-md-12 text-center">
+                    <i id="facebook" class="fab fa-facebook-square"></i>
+                    <i id="insta" class="fab fa-instagram"></i>
+                    <i id="twitter" class="fab fa-twitter-square"></i>
+                </div>
+                <div class="col-md-12 text-center">
+                    <h6 class="">Designed <span style="color: red;">&hearts;</span> by Chauss'Kaly<a href="http://www.prat.ee/k%22%3EKaly"></a> </h6>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!-- FIN MENTIONS LEGALES -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="js.js">
-
-    </script>
+    <script src="js.js"></script>
   </body>
 </html>
