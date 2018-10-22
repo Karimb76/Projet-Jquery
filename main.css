@@ -347,7 +347,7 @@ i:hover {
 }
 
 .removeItem {
-  margin:auto;
+  margin: 10px;
   display:block;
 }
 
@@ -409,6 +409,22 @@ h6{
 .mailto{
   font-size: 14px;
 }
+/*MODAL*/
+.modal-title{
+  margin-bottom: 10px;
+}
+.modal-dialog input {
+  max-width: 300px;
+}
+#formControlNom{
+  margin-left: -10px;
+}
+#formControlPrenom{
+  margin-left: 10px;
+}
+.modal-footer{
+  /* justify-content: space-between; */
+}
 /****************************FIN MENTIONS LEGALES***************/
 @media screen and (min-width: 200px) and (max-width: 780px) {
   #navbar{
@@ -427,11 +443,23 @@ h6{
   #modalFooter1{
     display: none;
   }
-  #modalFooter2{
-    margin-left: 2%;
+  #modalFooter2 button{
+    /* margin-left: 2%; */
   }
   #cartItems .itemDetails {
     margin-right: 0px;
+  }
+  #modalPanier1{
+    display: none;
+  }
+  #modalPanierFooter1{
+    display: none;
+  }
+  #formControlNom{
+    margin-left: 0px;
+  }
+  #formControlPrenom{
+    margin-left: 0px;
   }
 }
 @media screen and (min-width: 781px) and (max-width: 2000px) {
@@ -439,6 +467,12 @@ h6{
     display: none;
   }
   #modalFooter2{
+    display: none;
+  }
+  #modalPanier2{
+    display: none;
+  }
+  #modalPanierFooter2{
     display: none;
   }
 }

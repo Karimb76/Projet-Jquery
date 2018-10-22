@@ -117,73 +117,139 @@
 				<div class="modal-footer col-12" id="modalFooter2">
 	        <button id="achat" type="button" class="btn btn-secondary col-5" data-dismiss="modal">Poursuivre<br>vos achats</button>
 					<button type="button" class="btn btn-info col-2" id="maj" data-toggle="tooltip" data-placement="top" title="Mettre à jour le panier"><i class="fa fa-sync-alt"></i></button>
-	        <button id="valider" type="button" class="btn btn-success col-5">Valider la<br>commande</button>
+	        <button id="valider" type="button" class="btn btn-success col-5" data-toggle="modal" data-target="#sem-reg" aria-hidden="true">Valider la<br>commande</button>
 				</div>
 	    </div>
 	  </div>
 	</div>
 	<!--TEST-->
 	<!-- The Modal -->
-<div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-reg">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-
-      <!-- Modal body -->
-      <div class="modal-body seminor-login-modal-body">
-       <h5 class="modal-title text-center">Informations client et paiement</h5>
-        <button type="button" class="close" data-dismiss="modal">
-            <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
-        </button>
-
-
-  <form class="seminor-login-form">
-    <div class="form-group">
-			<label class="form-control-placeholder" for="name">Nom</label>
-      <input type="name" class="form-control" required autocomplete="off">
-    </div>
-		<div class="form-group">
-			<label class="form-control-placeholder" for="prenom">Prénom</label>
-			<input type="name" class="form-control" required autocomplete="off">
+	<!-- ORDINATEUR -->
+	<div class="modal fade seminor-login-modal modalPanier1" data-backdrop="static" id="sem-reg">
+  	<div class="modal-dialog modal-dialog-centered">
+    	<div class="modal-content">
+      	<!-- Modal body -->
+      	<div class="modal-body seminor-login-modal-body">
+       		<h5 class="modal-title text-center">Informations client et paiement</h5>
+      		<button type="button" class="close" data-dismiss="modal">
+          	<span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+      		</button>
+					<!-- ORDIANTEUR -->
+					<form class="seminor-login-form" id="modalPanier1">
+						<div class="container-fluid">
+							<div class="row">
+		    				<div class="form-group col" id="formControlNom">
+									<label class="form-control-placeholder" for="name">Nom</label>
+						      <input type="text" class="form-control" id="nom" />
+						    </div>
+								<div class="form-group col" id="formControlPrenom">
+									<label class="form-control-placeholder" for="prenom">Prénom</label>
+									<input type="text" class="form-control" id="prenom" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group col">
+									<label class="form-control-placeholder" for="email">Adresse mail</label>
+						      <input type="text" class="form-control" required autocomplete="off" id="email">
+						    </div>
+						    <div class="form-group col">
+						      <label class="form-control-placeholder" for="telephone">Téléphone</label>
+						      <input type="text" class="form-control" id="tel">
+						    </div>
+							</div>
+							<div class="row">
+								<div class="form-group col">
+									<label class="form-control-placeholder" for="city">Ville</label>
+						      <input type="text" class="form-control" id="ville">
+						    </div>
+							</div>
+						 	<div class="row">
+								<div class="form-group col">
+									<label class="form-control-placeholder" for="cbnumber">Numéro de carte bancaire</label>
+									<input type="text" class="form-control" id="cbnumber">
+								</div>
+								<div class="form-group col">
+						      <label class="form-control-placeholder" for="cbdate">Date de validité</label>
+						      <input type="text" class="form-control" id="cbdate">
+						    </div>
+						 	</div>
+							<div class="row">
+								<div class="form-group col">
+						      <label class="form-control-placeholder" for="cbsecurity">Code de sécurité</label>
+						      <input type="text" class="form-control" id="cbsecurity">
+						    </div>
+								<div class="form-group col">
+									<label class="form-control-placeholder" for="cbname">Nom du titulaire</label>
+									<input type="text" class="form-control" id="cbname">
+								</div>
+							</div>
+						</div>
+  				</form>
+					<!--  RESPONSIVE -->
+					<form class="seminor-login-form" id="modalPanier2">
+						<div class="container-fluid">
+					    <div class="form-group" id="formControlNom">
+								<label class="form-control-placeholder" for="name">Nom</label>
+					      <input type="text" class="form-control" id="nom" />
+					    </div>
+							<div class="form-group" id="formControlPrenom">
+								<label class="form-control-placeholder" for="prenom">Prénom</label>
+								<input type="text" class="form-control" id="prenom" />
+							</div>
+							<div class="form-group">
+								<label class="form-control-placeholder" for="email">Adresse mail</label>
+					      <input type="text" class="form-control" required autocomplete="off" id="email">
+					    </div>
+					    <div class="form-group">
+					      <label class="form-control-placeholder" for="telephone">Téléphone</label>
+					      <input type="text" class="form-control" id="tel">
+					    </div>
+							<div class="form-group">
+								<label class="form-control-placeholder" for="city">Ville</label>
+					      <input type="text" class="form-control" id="ville">
+					    </div>
+							<div class="form-group">
+								<label class="form-control-placeholder" for="cbnumber">Numéro de carte bancaire</label>
+								<input type="text" class="form-control" id="cbnumber">
+							</div>
+							<div class="form-group">
+					      <label class="form-control-placeholder" for="cbdate">Date de validité</label>
+					      <input type="text" class="form-control" id="cbdate">
+					    </div>
+							<div class="form-group">
+					      <label class="form-control-placeholder" for="cbsecurity">Code de sécurité</label>
+					      <input type="text" class="form-control" id="cbsecurity">
+					    </div>
+							<div class="form-group">
+								<label class="form-control-placeholder" for="cbname">Nom du titulaire</label>
+								<input type="text" class="form-control" id="cbname">
+							</div>
+						</div>
+					</form>
+					<div class="modal-footer" id="modalPanierFooter1">
+						<button id="returnpanier" type="button" class="btn btn-dark col" data-dismiss="modal">Retourner au panier</button>
+						<button id="validercommande" type="button" class="btn btn-success col" aria-hidden="true">Valider le paiement</button>
+		      </div>
+					<div id="modalPanierFooter2">
+						<div class="modal-footer">
+							<button id="returnpanier" type="button" class="btn btn-dark col" data-dismiss="modal">Retourner au panier</button>
+						</div>
+						<div class="modal-footer">
+							<button id="validercommande" type="button" class="btn btn-success col" aria-hidden="true">Valider le paiement</button>
+		      	</div>
+					</div>
+				</div>
+	    </div>
+	  </div>
+	</div>
+		<!--FINTEST ----------------------------------------------->
+		<!--alert à l'ajout d'un produit au panier-->
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+			<button type="button" class="close" id="closealert">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			Le produit a bien été ajouté au panier.
 		</div>
-    <div class="form-group">
-			<label class="form-control-placeholder" for="email">Adresse mail</label>
-      <input type="email" class="form-control" required autocomplete="off">
-    </div>
-    <div class="form-group">
-      <label class="form-control-placeholder" for="telephone">Téléphone</label>
-      <input type="tel" class="form-control" required autocomplete="off">
-    </div>
-    <div class="form-group">
-			<label class="form-control-placeholder" for="city">Ville</label>
-      <input type="text" class="form-control" required autocomplete="off">
-    </div>
-    <div class="form-group">
-			<label class="form-control-placeholder" for="cbnumber">Numéro de carte bancaire</label>
-      <input type="number" class="form-control" required autocomplete="off">
-    </div>
-    <div class="form-group">
-      <label class="form-control-placeholder" for="cbsecurity">Code de sécurité</label>
-      <input type="number" class="form-control" required autocomplete="off">
-    </div>
-		<div class="form-group">
-			<label class="form-control-placeholder" for="cbname">Nom du titulaire</label>
-			<input type="number" class="form-control" required autocomplete="off">
-		</div>
-    </form>
-		<button id="returnpanier" type="button" class="btn btn-dark">Retourner au panier</button>
-		<button id="validercommande" type="button" class="btn btn-success" aria-hidden="true">Valider le paiement</button>
-      </div>
-    </div>
-  </div>
-</div>
-	<!--FINTEST ----------------------------------------------->
-	<!--alert à l'ajout d'un produit au panier-->
-	<div class="alert alert-success alert-dismissible fade show" role="alert">
-	<button type="button" class="close" id="closealert">
-		<span aria-hidden="true">&times;</span>
-	</button>
-Le produit a bien été ajouté au panier.
-</div>
     <!-- FIN NAVBAR -->
     <!-- BOUTIQUE -->
 		<div class="container-fluid mx-auto" id="boutiique">
@@ -218,9 +284,7 @@ Le produit a bien été ajouté au panier.
 
 						</div>
 						<button id="add1" class="add btn btn-light">Ajouter au panier</button>
-
 					</div>
-
 
 					<div id="man2" class="item col-md-4 col-12">
 						<div class="itemDetails">

@@ -382,6 +382,65 @@ $('#shoppingCart').on('click', '.removeItem', function(){ //dans le panier, au c
 if (itemCount === 0) {
   $("#itemCount, #itemCount2").text();
 }
+
+// ORIDNATEUR
+$("#validercommande").click(function() {
+  var regexnom = /^[a-zA-Zéèàäëêâïôö]+(|-| )(|[a-zA-Zéèàäëêâïôö])+$/;
+  var regextel = /^[0-9]{10}$/;
+  var regexmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var regexcb = /^[0-9]{16}$/;
+  var regexcbsecurity = /^[0-9]{3}$/;
+  var name = $("#nom").val();
+  var prenom = $("#prenom").val();
+  var email = $("#email").val();
+  var tel = $("#tel").val();
+  var ville = $("#ville").val();
+  var cbnumber = $("#cbnumber").val();
+  var cbdate = $("#cbdate").val();
+  var cbsecurity = $("#cbsecurity").val();
+  var cbname = $("#cbname").val();
+  if ((regexnom.test(name)) && (regexnom.test(prenom))) {
+    if (regexmail.test(email)) {
+      if (regextel.test(tel)) {
+        if (regexnom.test(ville)) {
+          if (regexcb.test(cbnumber)) {
+            if (regexcbsecurity.test(cbsecurity)) {
+              if (regexcbsecurity.test(cbdate)) {
+                if (regexnom.test(cbname)) {
+                  alert("Nous allons procéder à la validation et à l'envoi de votre commande. Merci et à bientôt!")
+                }
+                else {
+                  alert("La date de validité n'est pas valide");
+                }
+              }
+              else {
+                alert("Le nom du titulaire n'est pas valide");
+              }
+            }
+            else {
+              alert("Le numéro de sécurité n'est pas valide");
+            }
+          }
+          else {
+            alert("Le numéro de carte bancaire n'est pas valide")
+          }
+        }
+        else {
+        alert("La ville n'est pas valide");
+        }
+      }
+      else {
+        alert("Le téléphone n'est pas valide");
+      }
+    }
+    else {
+      alert("L'adresse mail n'est pas valide");
+    }
+  }
+  else {
+    alert("Le prénom ou le nom n'est pas valide");
+  }
+});
 /****************************FIN PANIER*************************/
 /****************************MENTIONS LEGALES*******************/
 $('#footer').css('display', 'block');
