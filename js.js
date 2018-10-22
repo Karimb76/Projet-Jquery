@@ -211,7 +211,7 @@ $('#add12').click(function (){
 }});
 
 //  met à jour le panier lors de l'ajout d'un produit
-$('#btnPanier, #maj').click(function(){
+function maj(){
   $("#cartItems #select").show();
   if ($("#quantity1").length) { //si #quantity1 existe, calculer sa valeur en fonction du nombre de produits1 ajouter
     var price1 = parseInt($("#price1").text() * $("#quantity1").val());
@@ -287,7 +287,10 @@ $('#btnPanier, #maj').click(function(){
   }
   var prixTotal = price1 + price2 + price3 + price4 + price5 + price6 + price7 + price8 + price9 + price10 + price11 + price12;
   $('#cartTotal').text("Total: " + prixTotal + " €").css("text-align", "center").css("font-weight", "bolder");
-});
+};
+
+$('#btnPanier').click(maj);
+$(document).click('#cartItems input', maj);
 
 // //   // Calculer le prix total
 // $(".add").click(function() {
