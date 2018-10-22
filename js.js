@@ -404,45 +404,61 @@ $("#validercommande").click(function() {
   var cbsecurity = $("#cbsecurity").val();
   var cbname = $("#cbname").val();
   if ((regexnom.test(name)) && (regexnom.test(prenom))) {
+    $("#nom, #prenom").css("border", "1px solid green");
     if (regexmail.test(email)) {
+      $("#email").css("border", "1px solid green");
       if (regextel.test(tel)) {
+        $("#tel").css("border", "1px solid green");
         if (regexnom.test(ville)) {
+          $("#ville").css("border", "1px solid green");
           if (regexcb.test(cbnumber)) {
+            $("#cbnumber").css("border", "1px solid green");
             if (regexcbsecurity.test(cbsecurity)) {
+              $("#cbsecurity").css("border", "1px solid green");
               if (regexcbdate.test(cbdate)) {
+                $("#cbdate").css("border", "1px solid green");
                 if (regexnom.test(cbname)) {
                   alert("Nous allons procéder à la validation et à l'envoi de votre commande. Merci et à bientôt!")
+                  $("#cbname").css("border", "1px solid green");
                 }
               else {
                 alert("Le nom du titulaire n'est pas valide");
+                $("#cbname").css("border", "1px solid red");
               }
             }
             else {
               alert("La date de validité n'est pas valide");
+              $("#cbdate").css("border", "1px solid red");
             }
           }
             else {
               alert("Le numéro de sécurité n'est pas valide");
+              $("#cbsecurity").css("border", "1px solid red");
             }
           }
           else {
-            alert("Le numéro de carte bancaire n'est pas valide")
+            alert("Le numéro de carte bancaire n'est pas valide");
+            $("#cbnumber").css("border", "1px solid red");
           }
         }
         else {
         alert("La ville n'est pas valide");
+        $("#cbnumber").css("border", "1px solid red");
         }
       }
       else {
         alert("Le téléphone n'est pas valide");
+        $("#tel").css("border", "1px solid red");
       }
     }
     else {
       alert("L'adresse mail n'est pas valide");
+      $("#email").css("border", "1px solid red");
     }
   }
   else {
     alert("Le prénom ou le nom n'est pas valide");
+    $("#nom, #prenom").css("border", "1px solid red");
   }
 });
 /****************************FIN PANIER*************************/
