@@ -393,6 +393,7 @@ $("#validercommande").click(function() {
   var regexmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   var regexcb = /^[0-9]{16}$/;
   var regexcbsecurity = /^[0-9]{3}$/;
+  var regexcbdate = /^[(|0)0-12]+(\/)20|1[8-9]|2[0-9]$/;
   var name = $("#nom").val();
   var prenom = $("#prenom").val();
   var email = $("#email").val();
@@ -408,18 +409,18 @@ $("#validercommande").click(function() {
         if (regexnom.test(ville)) {
           if (regexcb.test(cbnumber)) {
             if (regexcbsecurity.test(cbsecurity)) {
-              if (regexcbsecurity.test(cbdate)) {
+              if (regexcbdate.test(cbdate)) {
                 if (regexnom.test(cbname)) {
                   alert("Nous allons procéder à la validation et à l'envoi de votre commande. Merci et à bientôt!")
                 }
-                else {
-                  alert("La date de validité n'est pas valide");
-                }
-              }
               else {
                 alert("Le nom du titulaire n'est pas valide");
               }
             }
+            else {
+              alert("La date de validité n'est pas valide");
+            }
+          }
             else {
               alert("Le numéro de sécurité n'est pas valide");
             }
