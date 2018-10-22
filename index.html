@@ -95,14 +95,6 @@
 			</div>
 		</nav>
 
-		<!-- <div id="shoppingCart">
-		    <div id="cartItemsContainer">
-		      <h2>Produits dans votre panier</h2>
-		      <i class="fa fa-times-circle-o fa-3x openCloseCart" aria-hidden="true"></i>
-		      <div id="cartItems"></div>
-		      <span id="cartTotal"></span>
-		  	</div>
-		  </div> -->
 
 			<div class="modal fade" id="shoppingCart" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -119,7 +111,7 @@
 				<div class="modal-footer" id="modalFooter1">
 	        <button id="achat" type="button" class="btn btn-secondary" data-dismiss="modal">Poursuivre vos achats</button>
 					<button type="button" class="btn btn-info" id="maj" data-toggle="tooltip" data-placement="top" title="Mettre à jour le panier"><i class="fa fa-sync-alt"></i></button>
-	        <button id="valider" type="button" class="btn btn-success">Valider la commande</button>
+	        <button id="valider" type="button" class="btn btn-success" data-toggle="modal" data-target="#sem-reg" aria-hidden="true">Valider la commande</button>
 	      </div>
 				<!-- RESPONSIVE -->
 				<div class="modal-footer col-12" id="modalFooter2">
@@ -130,6 +122,62 @@
 	    </div>
 	  </div>
 	</div>
+	<!--TEST-->
+	<!-- The Modal -->
+<div class="modal fade seminor-login-modal" data-backdrop="static" id="sem-reg">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal body -->
+      <div class="modal-body seminor-login-modal-body">
+       <h5 class="modal-title text-center">Informations client et paiement</h5>
+        <button type="button" class="close" data-dismiss="modal">
+            <span><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+        </button>
+
+
+  <form class="seminor-login-form">
+    <div class="form-group">
+			<label class="form-control-placeholder" for="name">Nom</label>
+      <input type="name" class="form-control" required autocomplete="off">
+    </div>
+		<div class="form-group">
+			<label class="form-control-placeholder" for="prenom">Prénom</label>
+			<input type="name" class="form-control" required autocomplete="off">
+		</div>
+    <div class="form-group">
+			<label class="form-control-placeholder" for="email">Adresse mail</label>
+      <input type="email" class="form-control" required autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label class="form-control-placeholder" for="telephone">Téléphone</label>
+      <input type="tel" class="form-control" required autocomplete="off">
+    </div>
+    <div class="form-group">
+			<label class="form-control-placeholder" for="city">Ville</label>
+      <input type="text" class="form-control" required autocomplete="off">
+    </div>
+    <div class="form-group">
+			<label class="form-control-placeholder" for="cbnumber">Numéro de carte bancaire</label>
+      <input type="number" class="form-control" required autocomplete="off">
+    </div>
+    <div class="form-group">
+      <label class="form-control-placeholder" for="cbsecurity">Code de sécurité</label>
+      <input type="number" class="form-control" required autocomplete="off">
+    </div>
+		<div class="form-group">
+			<label class="form-control-placeholder" for="cbname">Nom du titulaire</label>
+			<input type="number" class="form-control" required autocomplete="off">
+		</div>
+    </form>
+		<button id="returnpanier" type="button" class="btn btn-dark">Retourner au panier</button>
+		<button id="validercommande" type="button" class="btn btn-success" aria-hidden="true">Valider le paiement</button>
+      </div>
+    </div>
+  </div>
+</div>
+	<!--FINTEST ----------------------------------------------->
+	<!--alert à l'ajout d'un produit au panier-->
 	<div class="alert alert-success alert-dismissible fade show" role="alert">
 	<button type="button" class="close" id="closealert">
 		<span aria-hidden="true">&times;</span>
@@ -155,6 +203,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 95 PREMIUM</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : A001<span class="price" id="price1"><br><br>175</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 
 						</div>
@@ -172,6 +231,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">GIVENCHY</span><br/>Sneakers</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : A002<span class="price" id="price2"><br><br>244</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 						</div>
 						<button id="add2" class="add btn btn-light">Ajouter au panier</button>
@@ -186,6 +256,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 270</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : A003<span id="price3" class="price"><br><br>150</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 						</div>
 						<button id="add3" class="add btn btn-light">Ajouter au panier</button>
@@ -202,6 +283,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">MSGM</span><br/>Sneakers</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : A004<span id="price4" class="price"><br><br>229</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 						</div>
 						<button id="add4" class="add btn btn-light">Ajouter au panier</button>
@@ -216,7 +308,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">ADIDAS ORIGINALS</span><br/>EQT SUPPORT MID ADV PK</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : A005<span id="price5" class="price"><br><br>120</span><span class="euros">€</span></p>
-							</div>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+								 <option>38</option>
+								 <option>39</option>
+								 <option>40</option>
+								 <option>41</option>
+								 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+								</select>	</div>
 						</div>
 						<button id="add5" class="add btn btn-light">Ajouter au panier</button>
 					</div>
@@ -230,6 +332,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 95 PREMIUM</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : A006<span id="price6" class="price"><br><br>175</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 						</div>
 						<button id="add6" class="add btn btn-light">Ajouter au panier</button>
@@ -253,6 +366,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">PUMA</span><br/>AVID Fusefit Mid</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : B007<span id="price7" class="price"><br><br>140</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 						</div>
 						<button id="add7" class="add btn btn-light">Ajouter au panier</button>
@@ -267,6 +391,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR MAX 97</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : B008<span id="price8" class="price"><br><br>180</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 						</div>
 						<button id="add8" class="add btn btn-light">Ajouter au panier</button>
@@ -281,6 +416,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">VANS</span><br/>UA SK8-HI</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : B009<span id="price9" class="price"><br><br>69</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 						</div>
 						<button id="add9" class="add btn btn-light">Ajouter au panier</button>
@@ -297,6 +443,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">ADIDAS ORIGINALS</span><br/>YUNG-1</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : B010<span id="price10" class="price"><br><br>120</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 						</div>
 						<button id="add10" class="add btn btn-light">Ajouter au panier</button>
@@ -311,6 +468,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">MM6 MAISON MARGIELA</span><br/>Sneakers</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : B011<span id="price11" class="price"><br><br>168</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 						</div>
 						<button id="add11" class="add btn btn-light">Ajouter au panier</button>
@@ -325,6 +493,17 @@ Le produit a bien été ajouté au panier.
 								<p class="shoesName"><span class="nameShoes">NIKE</span><br/>AIR FORCE</p>
 								<hr class="hrItem">
 								<p class="price-container">Réf : B012<span id="price12" class="price"><br><br>120</span><span class="euros">€</span></p>
+								<select class="form-control" name="pointure1" id="select">
+									<option>Pointure</option>
+							 	 <option>38</option>
+							 	 <option>39</option>
+							 	 <option>40</option>
+							 	 <option>41</option>
+							 	 <option>42</option>
+								 <option>43</option>
+								 <option>44</option>
+								 <option>45</option>
+							  </select>
 							</div>
 						</div>
 						<button id="add12" class="add btn btn-light">Ajouter au panier</button>

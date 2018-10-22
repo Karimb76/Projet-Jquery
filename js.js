@@ -39,7 +39,7 @@ $('#add1').click(function (){
   else { //sinon le rajouter au panier
   itemCount ++; //ajouter 1 au compteur du panier
   $('#itemCount, #itemCount2').text(itemCount).css('display', 'block'); //mettre à jour le compteur du panier
-  $(this).siblings().clone().appendTo('#cartItems').append('<button class="removeItem btn btn-light">Supprimer</button>').append("<input type='number' min='1' max='10' value='1' id='quantity1' />").css("display", "inline-block");
+  $(this).siblings().clone().appendTo('#cartItems').append('<button class="removeItem btn btn-light">Supprimer</button>').append("<input type='number' min='1' max='10' value='1' id='quantity1' />").append().css("display", "inline-block");
 } //aller chercher les elements freres de #add1, les cloner dans #cartItems et rajouter un bouton supprimer et un input
   });
 
@@ -210,10 +210,9 @@ $('#add12').click(function (){
   $(this).siblings().clone().appendTo('#cartItems').append('<button class="removeItem btn btn-light">Supprimer</button>').append("<input type='number' min='1' max='10' value='1' id='quantity12' />").css("display", "inline-block");
 }});
 
-$("#shoppingCart").find("input")
-
 //  met à jour le panier lors de l'ajout d'un produit
 $('#btnPanier, #maj').click(function(){
+  $("#cartItems #select").show();
   if ($("#quantity1").length) { //si #quantity1 existe, calculer sa valeur en fonction du nombre de produits1 ajouter
     var price1 = parseInt($("#price1").text() * $("#quantity1").val());
   }

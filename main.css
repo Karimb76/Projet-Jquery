@@ -19,8 +19,11 @@ body {
   width: 20%;
   text-transform: uppercase;
 }
+#select {
+  display: none;
+}
 
-.btn-dark {
+#btnsavoir {
   position:absolute;
   z-index: 100;
   top:50%;
