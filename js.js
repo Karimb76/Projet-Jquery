@@ -13,12 +13,14 @@ $(document).ready(function() {
   })
 
 $(".add").click(function() {
-  $(".alert").show();
+  $(".alertverte").show();
 });
 
 $("#closealert").click(function() {
   $(".alert").hide();
 });
+
+
 /***************************FIN PRESENTATION********************/
 /****************************BOUTIQUE***************************/
 /****************************FIN BOUTIQUE***********************/
@@ -291,7 +293,6 @@ function maj(){
 
 $('#btnPanier').click(maj);
 $(document).click('#cartItems input', maj);
-
 // //   // Calculer le prix total
 // $(".add").click(function() {
 //
