@@ -6,19 +6,15 @@ $(document).ready(function() {
     $(this).delay($(this).data('delay')).queue(function(){
       $(this).addClass('animate-in');
     });
-  });
-
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
+  }); //fonction js de l'animation de présentation
 
 $(".add").click(function() {
   $(".alertverte").show();
-});
+}); //fonction permettant de lancer l'alert en cas d'ajout de produit
 
 $("#closealert").click(function() {
   $(".alert").hide();
-});
+}); //fonction pour cacher l'alerte
 
 
 /***************************FIN PRESENTATION********************/
@@ -26,7 +22,7 @@ $("#closealert").click(function() {
 /****************************FIN BOUTIQUE***********************/
 /****************************PANIER*****************************/
 var itemCount = 0;
-
+//variable pour le compteur de produit du panier
 
 //ajoute le premier produit au panier
 $('#add1').click(function (){
@@ -37,7 +33,7 @@ $('#add1').click(function (){
   }
   else if ($('#quantity1').val() == 10) {
     alert("Vous avez déjà la quantité maximal de ce produit dans votre panier");
-  }
+  } //si on atteint la quatité maximale (10), afficher une alerte
   else { //sinon le rajouter au panier
   itemCount ++; //ajouter 1 au compteur du panier
   $('#itemCount, #itemCount2').text(itemCount).css('display', 'block'); //mettre à jour le compteur du panier
@@ -291,14 +287,9 @@ function maj(){
   $('#cartTotal').text("Total: " + prixTotal + " €").css("text-align", "center").css("font-weight", "bolder");
 };
 
-$('#btnPanier').click(maj);
-$(document).click('#cartItems input', maj);
-// //   // Calculer le prix total
-// $(".add").click(function() {
-//
-// });
+$('#btnPanier').click(maj); //lance la fonction maj (celle au dessus) quand on clicke sur le panier
+$(document).click('#cartItems input', maj); //lance la fonction maj quand on change la quantité d'un produit
 
-//
 // Supprimer un produit du panier
 $('#shoppingCart').on('click', '.removeItem', function(){ //dans le panier, au click sur un bouton de suppression
   $(this).parent().remove(); //supprimer le produit (l'élement parent de this qui contient le bouton de suppression en question)
@@ -385,16 +376,16 @@ $('#shoppingCart').on('click', '.removeItem', function(){ //dans le panier, au c
 
 if (itemCount === 0) {
   $("#itemCount, #itemCount2").text();
-}
+} //si le compteur du panier arrive à 0, faire disparaitre le rond rouge
 
-// ORIDNATEUR
+// fonction qui concerne le formule
 $("#validercommande").click(function() {
   var regexnom = /^[a-zA-Zéèàäëêâïôö]+(|-| )(|[a-zA-Zéèàäëêâïôö])+$/;
-  var regextel = /^[0-9]{10}$/;
+  var regextel = /^[0-9]{10}$/; //10 caractères obligatoire, uniquement des chiffres
   var regexmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  var regexcb = /^[0-9]{16}$/;
-  var regexcbsecurity = /^[0-9]{3}$/;
-  var regexcbdate = /^[(|0)0-12]+(\/)20|1[8-9]|2[0-9]$/;
+  var regexcb = /^[0-9]{16}$/; //16 caractères obligatoire, uniquement des chiffres
+  var regexcbsecurity = /^[0-9]{3}$/; //3 caractères obligatoire, uniquement des chiffres
+  var regexcbdate = /^[(|0)1-12]+(\/)20|1[8-9]|2[0-9]$/; //premier groupe allant de 1 à 12 ou 01 à 012, seconde allant de 2018 à 2029
   var name = $("#nom").val();
   var prenom = $("#prenom").val();
   var email = $("#email").val();
@@ -405,61 +396,61 @@ $("#validercommande").click(function() {
   var cbsecurity = $("#cbsecurity").val();
   var cbname = $("#cbname").val();
   if ((regexnom.test(name)) && (regexnom.test(prenom))) {
-    $("#nom, #prenom").css("border", "1px solid green");
+    $("#nom, #prenom").css("border", "1px solid green"); // ajouter une bordure verte si la test est passé
     if (regexmail.test(email)) {
-      $("#email").css("border", "1px solid green");
+      $("#email").css("border", "1px solid green");// ajouter une bordure verte si la test est passé
       if (regextel.test(tel)) {
-        $("#tel").css("border", "1px solid green");
+        $("#tel").css("border", "1px solid green");// ajouter une bordure verte si la test est passé
         if (regexnom.test(ville)) {
-          $("#ville").css("border", "1px solid green");
+          $("#ville").css("border", "1px solid green");// ajouter une bordure verte si la test est passé
           if (regexcb.test(cbnumber)) {
-            $("#cbnumber").css("border", "1px solid green");
+            $("#cbnumber").css("border", "1px solid green");// ajouter une bordure verte si la test est passé
             if (regexcbsecurity.test(cbsecurity)) {
-              $("#cbsecurity").css("border", "1px solid green");
+              $("#cbsecurity").css("border", "1px solid green");// ajouter une bordure verte si la test est passé
               if (regexcbdate.test(cbdate)) {
-                $("#cbdate").css("border", "1px solid green");
+                $("#cbdate").css("border", "1px solid green");// ajouter une bordure verte si la test est passé
                 if (regexnom.test(cbname)) {
-                  alert("Nous allons procéder à la validation et à l'envoi de votre commande. Merci et à bientôt!")
+                  alert("Nous allons procéder à la validation et à l'envoi de votre commande. Merci et à bientôt!") //message d'alerte si tous les tests sont passés
                   $("#cbname").css("border", "1px solid green");
                 }
               else {
                 alert("Le nom du titulaire n'est pas valide");
-                $("#cbname").css("border", "1px solid red");
+                $("#cbname").css("border", "1px solid red"); // ajouter une bordure rouge si la test est passé
               }
             }
             else {
               alert("La date de validité n'est pas valide");
-              $("#cbdate").css("border", "1px solid red");
+              $("#cbdate").css("border", "1px solid red"); // ajouter une bordure rouge si la test est passé
             }
           }
             else {
               alert("Le numéro de sécurité n'est pas valide");
-              $("#cbsecurity").css("border", "1px solid red");
+              $("#cbsecurity").css("border", "1px solid red"); // ajouter une bordure rouge si la test est passé
             }
           }
           else {
             alert("Le numéro de carte bancaire n'est pas valide");
-            $("#cbnumber").css("border", "1px solid red");
+            $("#cbnumber").css("border", "1px solid red");// ajouter une bordure rouge si la test est passé
           }
         }
         else {
         alert("La ville n'est pas valide");
-        $("#cbnumber").css("border", "1px solid red");
+        $("#cbnumber").css("border", "1px solid red");// ajouter une bordure rouge si la test est passé
         }
       }
       else {
         alert("Le téléphone n'est pas valide");
-        $("#tel").css("border", "1px solid red");
+        $("#tel").css("border", "1px solid red");// ajouter une bordure rouge si la test est passé
       }
     }
     else {
       alert("L'adresse mail n'est pas valide");
-      $("#email").css("border", "1px solid red");
+      $("#email").css("border", "1px solid red");// ajouter une bordure rouge si la test est passé
     }
   }
   else {
     alert("Le prénom ou le nom n'est pas valide");
-    $("#nom, #prenom").css("border", "1px solid red");
+    $("#nom, #prenom").css("border", "1px solid red");// ajouter une bordure rouge si la test est passé
   }
 });
 /****************************FIN PANIER*************************/
